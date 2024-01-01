@@ -44,7 +44,7 @@ export default function SignUp() {
       email: data.get('email'),
       password: data.get('password')
     };
-    await axios.post("http://localhost:3001/api/v1/user/signup", form,{headers});  
+    await axios.post("http://104.43.18.129:8000/api/v1/user/signup", form,{headers});  
     navigate('/')
   };
 
