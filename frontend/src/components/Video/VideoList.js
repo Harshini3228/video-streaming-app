@@ -16,7 +16,7 @@ export default function VideoList({ setLoggedIn }) {
         async function fetchData() {
             try {
                 const token = localStorage.getItem('token');
-                const {data} = await axios.get('http://104.43.18.129:8000/api/v1/video', {
+                const {data} = await axios.get('http://localhost:8000/api/v1/video', {
                     headers: ({
                         Authorization: 'Bearer ' + token
                     })
@@ -50,7 +50,7 @@ export default function VideoList({ setLoggedIn }) {
                                     <CardMedia
                                         component="img"
                                         sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-                                        image={`http://104.43.18.129:8000/${video.coverImage}`}
+                                        image={`http://localhost:8000/${video.coverImage}`}
                                         alt="alt"
                                     />
                                 </Card>

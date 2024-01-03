@@ -1,0 +1,16 @@
+FROM node:16-alpine
+
+RUN adduser -D -u 1001 nodejs
+
+WORKDIR /usr/app
+RUN chown nodejs:nodejs /usr/app
+
+USER nodejs
+
+COPY public/ public/
+COPY src/ src/
+COPY package.json .
+
+RUN npm install
+
+CMD ["npm", "start"]
