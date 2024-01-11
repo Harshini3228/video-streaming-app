@@ -19,6 +19,13 @@ To run frontend and backend simultaneously :
 npm i -g concurrently
 concurrently "cd backend && npm start" "cd frontend && npm start"
 ```
+
+To run it as containers:
+
+```
+docker-compose up
+```
+
 Login/Register, upload and start streaming!
 
 <img width="1435" alt="Screenshot 2024-01-11 at 9 59 03 AM" src="https://github.com/Harshini3228/video-streaming-app/assets/20380815/c82282e8-47ff-46a4-851b-bc86ace32239">
